@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Header پیشرفته با آیکون‌های Font Awesome</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    </style>
+    <style>
+      .nav-link {
+        text-decoration: none; /* حذف خط زیرین */
+        color: #000; /* رنگ متن لینک */
+        padding: 10px 15px; /* فضای داخلی لینک */
+        display: inline-block; /* نمایش به صورت بلوکی داخلی */
+      }
+
+      .nav-link:hover {
+        color: #e91e63; /* تغییر رنگ متن هنگام هاور */
+        background-color: #f0f0f0; /* پس‌زمینه هنگام هاور */
+        border-radius: 5px; /* حاشیه گرد */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="icon home-icon">
+          <i class="fas fa-arrow-right"></i>
+          <!-- آیکون خانه -->
+        </div>
+        <div class="icon food-icon">
+          <i class="fas fa-utensils"></i>
+          غذا
+          <!-- آیکون غذا -->
+        </div>
+        <div class="icon arrow-icon">
+          <i class="fas fa-home"></i>
+          <!-- آیکون فلش راست -->
+        </div>
+      </div>
+    </header>
+
+    <!---------------------------------------- Back ground ------------------------------------------------------>
+    <div class="salad-background">
+      <div class="icons-container">
+        <div class="icon-back">
+          <i class="fas fa-arrow-right"></i>
+          <!-- آیکون فلش به سمت راست -->
+        </div>
+        <div class="icon-back">
+          <i class="far fa-clock"></i>
+          <!-- آیکون ساعت -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="navbar">
+      <div class="search-container">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="nav-items">
+        <a href="#">پرطرفدار ها</a>
+        <a href="#">پیتزا ایتالیایی</a>
+        <a href="#">پیتزا آمریکایی</a>
+        <a href="#">برگر</a>
+      </div>
+      <div class="logo">
+        <img src="Assest/img/fast-food.png" alt="" />
+      </div>
+    </div>
+
+    <div class="product-container">
+      <div class="product">
+          <a href="product1.html">
+              <img src="Assest/img/product1.jpg" alt="محصول 1">
+              <h2>محصول 1</h2>
+              <p>توضیحات محصول 1</p>
+              <div class="price">100,000 تومان</div>
+              <button class="add-to-cart"><i class="fas fa-plus"></i> افزودن به سبد خرید</button>
+          </a>
+      </div>
+      <div class="product">
+          <a href="product2.html">
+              <img src="Assest/img/product2.jpg" alt="محصول 2">
+              <h2>محصول 2</h2>
+              <p>توضیحات محصول 2</p>
+              <div class="price">150,000 تومان</div>
+              <button class="add-to-cart"><i class="fas fa-plus"></i> افزودن به سبد خرید</button>
+          </a>
+      </div>
+      <div class="product">
+          <a href="product3.html">
+              <img src="Assest/img/product3.jpg" alt="محصول 3">
+              <h2>محصول 3</h2>
+              <p>توضیحات محصول 3</p>
+              <div class="price">200,000 تومان</div>
+              <button class="add-to-cart"><i class="fas fa-plus"></i> افزودن به سبد خرید</button>
+          </a>
+      </div>
+      <div class="product">
+          <a href="product4.html">
+              <img src="Assest/img/product4.jpg" alt="محصول 4">
+              <h2>محصول 4</h2>
+              <p>توضیحات محصول 4</p>
+              <div class="price">250,000 تومان</div>
+              <button class="add-to-cart"><i class="fas fa-plus"></i> افزودن به سبد خرید</button>
+          </a>
+      </div>
+  </div> -->
+    <div class="navbar">
+      <div class="search-container">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="nav-items">
+        <a href="javascript:void(0);" onclick="showCategory('popular')"
+          >پرطرفدار ها</a
+        >
+        <a href="javascript:void(0);" onclick="showCategory('italian-pizza')"
+          >پیتزا ایتالیایی</a
+        >
+        <a href="javascript:void(0);" onclick="showCategory('american-pizza')"
+          >پیتزا آمریکایی</a
+        >
+        <a href="javascript:void(0);" onclick="showCategory('burger')">برگر</a>
+      </div>
+
+      <div class="logo">
+        <img src="Assest/img/fast-food.png" alt="" />
+      </div>
+    </div>
+
+    <div id="products-container">
+      <div class="category" id="popular">
+        <div class="product">
+          <a style="text-decoration: none" href="product1.html">
+            <img src="Assest/img/burger.jpg" alt="محصول 1" />
+            <h2>همبرگر</h2>
+            <p>با پنیر اضافه</p>
+            <div class="price">100,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+        <div class="product">
+          <a style="text-decoration: none" href="product2.html">
+            <img src="Assest/img/pizaaitalia.jpg" alt="محصول 2" />
+            <h2 style="text-decoration: none">پیتزا ایتالیایی</h2>
+            <p>توضیحات محصول 2</p>
+            <div class="price">150,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product3.html">
+            <img src="Assest/img/freid-chicken-recipe.jpg" alt="محصول 3" />
+            <h2>مرغ سوخاری</h2>
+            <p>توضیحات محصول 3</p>
+            <div class="price">165,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product4.html">
+            <img src="Assest/img/pizzapprony.jpg" alt="محصول 4" />
+            <h2>پیتزا پپرونی</h2>
+            <p>توضیحات محصول 4</p>
+            <div class="price">188,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product4.html">
+            <img src="Assest/img/Homemade-onion-burgers.jpg" alt="محصول 4" />
+            <h2>برگر ذغالی</h2>
+            <p>توضیحات محصول 4</p>
+            <div class="price">199,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product4.html">
+            <img src="Assest/img/american.jpg" alt="محصول 4" />
+            <h2>پیتزا آمریکایی</h2>
+            <p>توضیحات محصول 4</p>
+            <div class="price">235,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product4.html">
+            <img src="Assest/img/araberger.jpg" alt="محصول 4" />
+            <h2>برگر تند</h2>
+            <p>توضیحات محصول 4</p>
+            <div class="price">99,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="product4.html">
+            <img src="Assest/img/pizzaamerican.jpg" alt="محصول 4" />
+            <h2>پیتزا مخصوص</h2>
+            <p>توضیحات محصول 4</p>
+            <div class="price">99,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <!-- محصولات بیشتر برای پرطرفدارها -->
+      </div>
+      <div class="category" id="italian-pizza" style="display: none">
+        <div class="product">
+          <a style="text-decoration: none" href="italian-pizza1.html">
+            <img src="Assest/img/american.jpg" alt="پیتزا ایتالیایی 1" />
+            <h2>پیتزا ایتالیایی</h2>
+            <p>توضیحات پیتزا ایتالیایی</p>
+            <div class="price">150,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="italian-pizza1.html">
+            <img src="Assest/img/pizaaitalia.jpg" alt="پیتزا ایتالیایی 1" />
+            <h2>پیتزا ایتالیایی</h2>
+            <p>توضیحات پیتزا ایتالیایی</p>
+            <div class="price">150,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="italian-pizza1.html">
+            <img src="Assest/img/pizzapprony.jpg" alt="پیتزا ایتالیایی 1" />
+            <h2>پیتزا ایتالیایی</h2>
+            <p>توضیحات پیتزا ایتالیایی</p>
+            <div class="price">150,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="italian-pizza1.html">
+            <img src="Assest/img/pizzaamerican.jpg" alt="پیتزا ایتالیایی 1" />
+            <h2>پیتزا ایتالیایی</h2>
+            <p>توضیحات پیتزا ایتالیایی</p>
+            <div class="price">150,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <!-- محصولات بیشتر برای پیتزا ایتالیایی -->
+      </div>
+      <div class="category" id="american-pizza" style="display: none">
+        <div class="product">
+          <a style="text-decoration: none" href="american-pizza1.html">
+            <img src="Assest/img/american.jpg" alt="پیتزا آمریکایی 1" />
+            <h2>پیتزا آمریکایی</h2>
+            <p>توضیحات پیتزا آمریکایی</p>
+            <div class="price">170,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+        <!-- محصولات بیشتر برای پیتزا آمریکایی -->
+      </div>
+      <div class="category" id="burger" style="display: none">
+        <div class="product">
+          <a style="text-decoration: none" href="burger1.html">
+            <img src="Assest/img/burger.jpg" alt="برگر 1" />
+            <h2>برگر</h2>
+            <p>توضیحات برگر</p>
+            <div class="price">120,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="burger1.html">
+            <img src="Assest/img/araberger.jpg" alt="برگر 1" />
+            <h2>برگر</h2>
+            <p>توضیحات برگر</p>
+            <div class="price">120,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="burger1.html">
+            <img src="Assest/img/burger.jpg" alt="برگر 1" />
+            <h2>برگر</h2>
+            <p>توضیحات برگر</p>
+            <div class="price">120,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+
+        <div class="product">
+          <a style="text-decoration: none" href="burger1.html">
+            <img src="Assest/img/Homemade-onion-burgers.jpg" alt="برگر 1" />
+            <h2>برگر</h2>
+            <p>توضیحات برگر</p>
+            <div class="price">120,000 تومان</div>
+            <button class="add-to-cart">
+              <i class="fas fa-plus"></i> افزودن به سبد خرید
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- محصولات بیشتر برای برگر -->
+
+
+    <!----------------------------------footer----------------------------------------------------------->
+   
+    <footer>
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h3>درباره ما</h3>
+              <p>متن کوتاه درباره سایت و هدف‌های آن. شما می‌توانید این متن را تغییر داده و اطلاعات بیشتری در مورد خود اضافه کنید.</p>
+              <div class="socials">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+          <div class="footer-section links">
+              <h3>لینک‌های مهم</h3>
+              <ul>
+                  <li><a href="#">خانه</a></li>
+                  <li><a href="#">درباره</a></li>
+                  <li><a href="#">تماس با ما</a></li>
+                  <li><a href="#">سوالات متداول</a></li>
+                  <li><a href="#">خدمات</a></li>
+                  <li><a href="#">پشتیبانی</a></li>
+              </ul>
+          </div>
+          <div class="footer-section contact">
+              <h3>تماس با ما</h3>
+              <p><i class="fas fa-map-marker-alt"></i> آدرس: خیابان نمونه، شهر نمونه</p>
+              <p><i class="fas fa-phone-alt"></i> تلفن: 0123456789</p>
+              <p><i class="fas fa-envelope"></i> ایمیل: info@example.com</p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          &copy; 2024 تمامی حقوق محفوظ است.
+      </div>
+  </footer>
+
+
+    <script>
+      function showCategory(category) {
+        // همه دسته‌ها را مخفی کن
+        var categories = document.querySelectorAll(".category");
+        categories.forEach(function (cat) {
+          cat.style.display = "none";
+        });
+        // دسته انتخاب شده را نمایش بده
+        document.getElementById(category).style.display = "flex";
+      }
+
+      // برای نمایش دسته پیش فرض (مثلاً پرطرفدار ها) می‌توانید این خط را اضافه کنید
+      document.addEventListener("DOMContentLoaded", function () {
+        showCategory("popular");
+      });
+    </script>
+  </body>
+</html>

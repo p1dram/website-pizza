@@ -1,0 +1,472 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed; /* فیکس کردن هدر */
+    top: 0; /* نمایش هدر در بالای صفحه */
+    left: 0;
+    width: 100%; /* اندازه هدر برابر با عرض صفحه */
+    background-color: #fff;
+    color: #000;
+    padding: 6.5px 0;
+    text-align: center;
+    z-index: 1000; /* لایه مخفی‌سازی بالاتر برای هدر */
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* تنظیم ترتیب و فاصله بین آیکون‌ها */
+    align-items: center; /* تنظیم مرکز‌چینی عمودی آیکون‌ها */
+}
+
+.icon {
+    font-size: 20px; /* اندازه آیکون */
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* افکت تغییر حالت */
+    background-color: #5555550e; /* پس‌زمینه آیکون */
+    border-radius: 50%; /* شکل گرد آیکون */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+}
+
+/* استایل‌های هنگام hover */
+.icon:hover {
+    transform: scale(1.2); /* افزایش اندازه آیکون در حالت hover */
+}
+
+/* استایل‌های هر آیکون به تنهایی */
+.home-icon {
+    background-color: #a3a39e19; /* پس‌زمینه آیکون خانه */
+}
+
+.home-icon i {
+    color: #3882f8; /* رنگ آبی برای آیکون خانه */
+}
+
+.food-icon {
+    background-color: #a3a39e19; /* پس‌زمینه آیکون غذا */
+}
+
+.food-icon i {
+    color: #28e71e; /* رنگ قرمز برای آیکون غذا */
+}
+
+.arrow-icon {
+    background-color: #a3a39e19; /* پس‌زمینه آیکون فلش راست */
+}
+
+.arrow-icon i {
+    color: #000; /* رنگ سبز برای آیکون فلش راست */
+}
+
+/*--------------------------------------------------Back gruond ----------------------------------------*/
+
+.salad-background {
+    background-image: url('Assest/img/preview.jpg'); /* مسیر به تصویر سالاد */
+    background-size: cover;
+    background-position: center;
+    height: 310px; /* ارتفاع بک‌گراند */
+    position: relative;
+    margin-top: 65px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between; /* ترتیب آیکون‌ها در دو طرف از مرکز */
+    align-items: center;
+    padding: 20px; /* فاصله داخلی برای آیکون‌ها */
+}
+
+.clock-icon {
+    font-size: 20px;
+    color: #fff; /* رنگ آیکون ساعت */
+    cursor: pointer;
+}
+
+.arrow-icon {
+    font-size: 20px;
+    color: #fff; /* رنگ آیکون فلش به سمت راست */
+    cursor: pointer;
+}
+.icon-back{
+    color: #00000053;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------Navbar----------------------------------------------------------- */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff0f;
+    padding: 10px 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-items {
+    display: flex;
+    justify-content: start;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.navbar .nav-items a {
+    color: rgb(63, 58, 58);
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 1s;
+    /* margin-right: 10px; */
+}
+
+.navbar .nav-items a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px 10px;
+    transform: scale(1.1,1.1);
+}
+
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.navbar .search-container button {
+    background-color: #04ef1f;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.navbar .search-container button:hover {
+    background-color: #56cc01;
+    color: #fff;
+    transform: scale(1.2,1.2);
+}
+
+.navbar .search-container button i {
+    font-size: 16px;
+}
+.logo img {
+    /* padding: 10px 20px; */
+    width: 50px;
+    height: 40px;
+    transition: 1s;
+    margin-left: 1px;
+}
+.logo img:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+
+
+/*----------------------------------------------product------------------------------------------------*/
+
+/* قسمت‌های قبلی از قبل تنظیم شده است و نیازی به تغییر ندارد */
+
+/* قسمت‌های قبلی از قبل تنظیم شده است و نیازی به تغییر ندارد */
+
+/* استایل پایه برای کانتینر محصولات */
+
+/* استایل پایه برای کانتینر محصولات */
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* استایل برای هر دسته محصول */
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* استایل برای هر محصول */
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: 1s;
+    
+}
+
+.product:hover{
+    transform: scale(1.05,1.05);
+    cursor: pointer;
+}
+
+/* استایل برای تصاویر محصولات */
+.product img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* استایل برای عنوان محصولات */
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #1b1ed8;
+
+}
+
+/* استایل برای توضیحات محصولات */
+.product p {
+    color: #555555;
+}
+
+/* استایل برای قیمت محصولات */
+.product .price {
+    font-size: 1.2em;
+    color: #e91e63;
+    margin: 10px 0;
+}
+
+/* استایل برای دکمه افزودن به سبد خرید */
+.product .add-to-cart {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* استایل برای دکمه افزودن به سبد خرید هنگام هاور */
+.product .add-to-cart:hover {
+    background-color: #d81b60;
+}
+
+/*-----------------------------------footer-------------------------------------------*/
+
+/* body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+footer {
+    background: #3333330f;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.footer-section p, .footer-section ul, .footer-section li, .footer-section a {
+    color: #000000;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-section ul li {
+    margin: 0 15px;
+}
+
+.footer-section a:hover {
+    color: #000000;
+}
+
+.footer-section .socials {
+    margin-top: 20px;
+}
+
+.footer-section .socials a {
+    color: #bbb;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.footer-section .socials a:hover {
+    color: #0015ff;
+    
+}
+
+.footer-section .contact p {
+    margin: 10px 0;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+    color: #bbb;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+} */
+
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background: #3333331a;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.2),   /* سایه اصلی */
+        0 6px 6px rgba(0, 0, 0, 0.15),    /* سایه متوسط */
+        0 -2px 5px rgba(0, 0, 0, 0.1);    /* سایه سبک از بالا */
+    border-radius: 15px 15px 0 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.footer-section p, .footer-section ul, .footer-section li, .footer-section a {
+    color: #000000;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-section ul li {
+    margin: 0 15px;
+}
+
+.footer-section a:hover {
+    color: #000000;
+}
+
+.footer-section .socials {
+    margin-top: 20px;
+}
+
+.footer-section .socials a {
+    color: #5d5757;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.footer-section .socials a:hover {
+    color: #0033ff;
+    transform: scale(1,9.1,9);
+    cursor: pointer;
+}
+
+.footer-section .contact p {
+    margin: 10px 0;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+    color: #bbb;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
